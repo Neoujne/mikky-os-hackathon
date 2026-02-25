@@ -8,6 +8,9 @@
 <h1 align="center">MIKKY OS</h1>
 <h3 align="center">AI-Powered Offensive Security Operations Center</h3>
 
+> [!CAUTION]
+> **LEGAL WARNING:** This tool is for **PERSONAL USE ONLY**. Use it to analyze your own websites or systems you have explicit permission to test. Unauthorized scanning of third-party websites is illegal and strictly prohibited. Read the full [DISCLAIMER.md](./DISCLAIMER.md) before use.
+
 <p align="center">
   <i>"The Matrix has you... unless you hack it first."</i>
 </p>
@@ -752,9 +755,11 @@ Built-in terminal emulator for direct command execution inside Docker containers
 
 ---
 
-## License
+## License & Legal
 
-MIT
+This project is licensed under the [MIT License](./LICENSE).
+
+**Disclaimer:** This software is for educational and authorized testing purposes only. See [DISCLAIMER.md](./DISCLAIMER.md) for more details.
 
 ---
 
