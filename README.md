@@ -183,7 +183,7 @@ cd mikky-os-backend && cp ../.env.example .env
 cd ../mikky-os-worker && docker build -t mikky-worker:latest .
 
 # Start ngrok tunnel (new terminal, keep running)
-ngrok http 5000
+npx ngrok http 5000
 # -> Copy forwarding URL (e.g. https://abc123.ngrok-free.app)
 
 # Tell Convex about your tunnel
@@ -243,10 +243,10 @@ After your agent finishes, complete these steps:
 | 2 | **Initialize Convex** | Terminal inside `mikky-os-frontend/` | Run `npx convex dev`, follow prompts, note the `CONVEX_URL` |
 | 3 | **Create a Clerk account** | [clerk.com](https://clerk.com/) | Create an app, copy `Publishable Key` |
 | 4 | **Create an OpenRouter account** | [openrouter.ai](https://openrouter.ai/) | Go to Keys, create an API key |
-| 5 | **Sign up for Ngrok** | [ngrok.com](https://ngrok.com/) | Copy your auth token, run `ngrok config add-authtoken <token>` |
+| 5 | **Sign up for Ngrok** | [ngrok.com](https://ngrok.com/) | Copy your auth token, run `npx ngrok config add-authtoken <token>` |
 | 6 | **Fill in `mikky-os-backend/.env`** | Your editor | Set `CONVEX_URL` and `OPENROUTER_API_KEY` |
 | 7 | **Fill in `mikky-os-frontend/.env.local`** | Your editor | Set `VITE_CONVEX_URL`, `VITE_CLERK_PUBLISHABLE_KEY` |
-| 8 | **Start Ngrok** | New terminal | Run `ngrok http 5000`, copy the https URL |
+| 8 | **Start Ngrok** | New terminal | Run `npx ngrok http 5000`, copy the https URL |
 | 9 | **Set backend URL in Convex** | Terminal in `mikky-os-frontend/` | `npx convex env set MIKKY_BACKEND_URL <ngrok-url>` |
 | 10 | **Launch the app** | Root terminal | `npm run dev:all` |
 | 11 | **Open the app** | Browser | Go to `http://localhost:5173` |
@@ -316,11 +316,11 @@ Ngrok creates a tunnel so the cloud database can talk to your local backend.
 4. Copy your **auth token** from the Ngrok dashboard
 5. Run this command to authenticate:
    ```bash
-   ngrok config add-authtoken YOUR_TOKEN_HERE
+   npx ngrok config add-authtoken YOUR_TOKEN_HERE
    ```
 6. **Verify:**
    ```bash
-   ngrok version
+   npx ngrok version
    ```
 
 ---
@@ -499,7 +499,7 @@ Convex runs in the cloud and needs to reach your local backend. Ngrok creates th
 1. Open a **new terminal** (call it **Terminal 3 &mdash; Ngrok**)
 2. Run:
    ```bash
-   ngrok http 5000
+   npx ngrok http 5000
    ```
 3. You'll see output like this:
    ```
@@ -683,7 +683,7 @@ Clerk keys might be missing or wrong.
 The Convex-to-backend webhook might not be reaching your machine.
 
 **Fix:**
-1. Make sure Ngrok is running: `ngrok http 5000`
+1. Make sure Ngrok is running: `npx ngrok http 5000`
 2. Update Convex with the new URL: `npx convex env set MIKKY_BACKEND_URL <ngrok-url>`
 3. Check that the backend is running on port 5000
 </details>
