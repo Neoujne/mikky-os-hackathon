@@ -1,0 +1,23 @@
+# Dependencies & Builds
+node_modules/
+dist/
+coverage/
+npm-debug.log
+*.log
+
+# Secrets & Environment
+.env
+.env.local
+.convex/
+.DS_Store
+
+# Agent lock coordination
+.agent-locks.json
+.agent-locks.json.write-lock
+
+# Internal Documentation (DO NOT PUSH)
+product-plan/
+conductor/
+
+# Claude Code local config
+.claude/
