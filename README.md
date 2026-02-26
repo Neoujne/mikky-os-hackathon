@@ -20,6 +20,10 @@
   to perform recon, enumeration, vulnerability scanning, and AI-driven reporting.
 </p>
 
+<p align="center">
+  <img src="./Screenshot%202026-02-25%20235424.png" alt="Mikky OS Mission Control Dashboard showing system metrics, active operations, and live console logs" width="100%">
+</p>
+
 ---
 
 ## Table of Contents
